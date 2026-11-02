@@ -20,8 +20,10 @@ int sz{0};
 std::unique_ptr<T[]> data;
 public:
 /// Construct a new queue with given capacity (default 1000)
-ArrayQueue(int cap = 1000)
-: capacity{cap}, data{std::make_unique<T[]>(cap)} {}
+ArrayQueue(int cap = 1000){
+    capacity = cap;
+    data = std::make_unique<T[]>(cap);
+}
 /// return number of elements currently in the queue
 int size() const{return sz;}
 /// return whether the queue is currently empty
