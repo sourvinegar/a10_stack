@@ -37,7 +37,9 @@ T& back(){return data[(f+sz-1)%capacity];}
 /// add element to the end of the queue
 /// @param elem the new element
 /// @throw overflow_error if queue is already at full capacity
-void push(const T& elem)("Queue overflow"){
+void push(const T& elem){
+    if(size() == capacity)
+        throw std::overflow_error("Queue overflow");
 int available{(f+sz-1)%capacity};
 data[available] = elem;
 sz++;
