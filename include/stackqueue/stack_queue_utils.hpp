@@ -13,7 +13,7 @@ std::string remove_duplicates(std::string input)
     std::string edited = "";
     char prev = input[0];
 
-    for(int i = 0; i < input.length(); i++){
+    for(int i = 0; i < int(input.length()); i++){
         container.push(input[i]);
 
         if(input[i] == prev && i != 0 && container.size() >= 2){
@@ -37,7 +37,7 @@ std::string clean_backspace_string(std::string input){
     dsac::stackqueue::stack<char> container;
     std::string edited = "";
 
-        for(int i = 0; i < input.length(); i++){
+        for(int i = 0; i < int(input.length()); i++){
         container.push(input[i]);
 
         if(input[i] == '<'){
