@@ -49,6 +49,7 @@ int elem = 5;
 int num = 5;
 REQUIRE(stack_contains(st, qu, elem) == true);
 REQUIRE(st.size() == 5);
+REQUIRE(st.top() == 5);
 REQUIRE(qu.empty() == true);
 
 elem = 1;

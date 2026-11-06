@@ -42,7 +42,7 @@ T& back(){return data[(f+sz-1)%capacity];}
 void push(const T& elem){
     if(size() == capacity)
         throw std::overflow_error("Queue overflow");
-int available{(f+sz-1)%capacity};
+int available{(f+sz)%capacity};
 data[available] = elem;
 sz++;
 }

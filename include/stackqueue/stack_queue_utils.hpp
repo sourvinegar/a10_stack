@@ -69,18 +69,18 @@ const T& elt){
     if(!qu.empty())
         throw std::invalid_argument("Q must be initially empty.");
 
-    for(int i = 0; i < length; i++){
-        if(st.top() == elt){
+    for(int i = 0; i < 2; i++){
+    while(!st.empty()){
+        if(i == 0 && st.top() == elt)
             found = true;
-        }
         qu.push(st.top());
         st.pop();
-    }
-
+        }
     while(!qu.empty()){
         st.push(qu.front());
         qu.pop();
     }
+}
 
     return found;
 }
